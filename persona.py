@@ -10,7 +10,7 @@ class Persona:
         if not nuevosDatos:
             return False  
         
-        # Actualizar solo los atributos 
+        
         if 'nombre' in nuevosDatos:
             self.nombre = nuevosDatos['nombre']
         if 'correo' in nuevosDatos:
