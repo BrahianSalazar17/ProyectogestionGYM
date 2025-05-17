@@ -21,10 +21,7 @@ class RegistroEntrada:
         self.estado_entrada = estado_entrada
 
     def validarAcceso(self, fecha_hora_entrada: datetime) -> bool:
-        """
-        Devuelve True si la hora de entrada está dentro del horario
-        permitido (ejemplo: 06:00‑22:00); False en otro caso.
-        """
+        
         hora = fecha_hora_entrada.time()
         return datetime.strptime("06:00", "%H:%M").time() <= hora <= datetime.strptime(
             "22:00", "%H:%M"
@@ -49,10 +46,7 @@ class RegistroEntrada:
         fecha_inicio: Optional[datetime] = None,
         fecha_fin: Optional[datetime] = None,
     ) -> List["RegistroEntrada"]:
-        """
-        Devuelve una lista de registros del cliente en el rango indicado.
-        Si no se dan fechas, devuelve todo el historial del cliente.
-        """
+     
         resultados = [
             reg
             for reg in cls._historial
