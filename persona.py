@@ -8,7 +8,7 @@ class Persona:
 
     def actualizarDatos(self, nuevosDatos: dict) -> bool:
         if not nuevosDatos:
-            return False  # No hay datos para actualizar
+            return False  
         
         # Actualizar solo los atributos 
         if 'nombre' in nuevosDatos:
